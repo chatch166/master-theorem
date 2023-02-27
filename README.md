@@ -80,31 +80,31 @@ The purpose of this lab is to both get you familiar with using these non-github 
         To complete this table, modify the `timeit` command from the [Runtime vs N section of lab-timeit2](https://github.com/mikeizbicki/lab-timeit2#runtime-vs-n) so that it: (1) uses the appropriate functions from this lab, and (2) uses the numpy array instead of a list as the input data structure.
         As in the previous lab, I recommend using a bash for loop to complete this task.
 
-        |                | `binary_search`           | `trinary_search`      |
+        | Units = usec   | `binary_search`           | `trinary_search`      |
         | -------------- | ------------------------- | --------------------- | 
-        | `n=2**0`       |                           |                       |
-        | `n=2**1`       |                           |                       |
-        | `n=2**2`       |                           |                       |
-        | `n=2**3`       |                           |                       |
-        | `n=2**4`       |                           |                       |
-        | `n=2**5`       |                           |                       |
-        | `n=2**6`       |                           |                       |
-        | `n=2**7`       |                           |                       |
-        | `n=2**8`       |                           |                       |
-        | `n=2**9`       |                           |                       |
-        | `n=2**10`      |                           |                       |
-        | `n=2**11`      |                           |                       |
-        | `n=2**12`      |                           |                       |
-        | `n=2**13`      |                           |                       |
-        | `n=2**14`      |                           |                       |
-        | `n=2**15`      |                           |                       |
-        | `n=2**16`      |                           |                       |
-        | `n=2**17`      |                           |                       |
-        | `n=2**18`      |                           |                       |
-        | `n=2**19`      |                           |                       |
-        | `n=2**20`      |                           |                       |
-        | `n=2**21`      |                           |                       |
-        | `n=2**22`      |                           |                       |
+        | `n=2**0`       |       0.716               |     1.97              |
+        | `n=2**1`       |       1.37                |     3.64              |
+        | `n=2**2`       |       1.91                |     3.67              |
+        | `n=2**3`       |       2.24                |     3.41              |
+        | `n=2**4`       |       2.81                |     5.49              |
+        | `n=2**5`       |       3.31                |     0.634             |
+        | `n=2**6`       |       3.69                |     3.33              |
+        | `n=2**7`       |       4.16                |     6.41              |
+        | `n=2**8`       |       4.65                |     5.95              |
+        | `n=2**9`       |       5.32                |     7.84              |
+        | `n=2**10`      |       6.33                |     5.2               |
+        | `n=2**11`      |       6.9                 |     7.69              |
+        | `n=2**12`      |       7.12                |     9.4               |
+        | `n=2**13`      |       8.23                |     10.5              |
+        | `n=2**14`      |       8.97                |     9.35              |
+        | `n=2**15`      |       9.49                |     12.9              |
+        | `n=2**16`      |       9.97                |     12.3              |
+        | `n=2**17`      |       10.1                |     14.8              |
+        | `n=2**18`      |       10.5                |     14.1              |
+        | `n=2**19`      |       11.6                |     17.3              |
+        | `n=2**20`      |       12.4                |     13.8              |
+        | `n=2**21`      |       13.4                |     17                |
+        | `n=2**22`      |       13.8                |     18.5              |
 
 
 1. Use the master theorem to solve the following recurrence relations,
@@ -113,16 +113,16 @@ The purpose of this lab is to both get you familiar with using these non-github 
 
     | recurrence           | solution                       | practical application                     |
     | -------------------- | ------------------------------ | ----------------------------------------- |
-    | T(n) = T(n/2) + n    | $\Theta(                    )$ | runtime of the bad binary search          |
-    | T(n) = T(n/2) + 1    | $\Theta(                    )$ | runtime of the correct binary search      |
-    | T(n) = T(n/3) + 1    | $\Theta(                    )$ | runtime of "trinary search"               |
-    | T(n) = 2T(n/2) + 1   | $\Theta(                    )$ | runtime for [finding the median of an unsorted list](https://en.wikipedia.org/wiki/Quickselect) |
-    | T(n) = 2T(n/2) + n   | $\Theta(                    )$ | runtime of merge sort                     |
-    | T(n) = 3T(n/3) + n   | $\Theta(                    )$ | runtime of a trinary merge sort           |
-    | T(n) = T(n/2) + n^2  | $\Theta(                    )$ |                                           |
-    | T(n) = 2T(n/2) + n^2 | $\Theta(                    )$ |                                           |
-    | T(n) = 3T(n/2) + n^2 | $\Theta(                    )$ |                                           |
-    | T(n) = 3T(n/2) + n   | $\Theta(                    )$ | runtime of [Karatsuba's integer multiplication algorithm](https://en.wikipedia.org/wiki/Karatsuba_algorithm); HINT: Case 1 |
+    | T(n) = T(n/2) + n    | $\Theta(n)                    )$ | runtime of the bad binary search          |
+    | T(n) = T(n/2) + 1    | $\Theta(log(n)                    )$ | runtime of the correct binary search      |
+    | T(n) = T(n/3) + 1    | $\Theta(log(n)                    )$ | runtime of "trinary search"               |
+    | T(n) = 2T(n/2) + 1   | $\Theta(n                    )$ | runtime for [finding the median of an unsorted list](https://en.wikipedia.org/wiki/Quickselect) |
+    | T(n) = 2T(n/2) + n   | $\Theta(nlog(n)                    )$ | runtime of merge sort                     |
+    | T(n) = 3T(n/3) + n   | $\Theta(nlog(n)                    )$ | runtime of a trinary merge sort           |
+    | T(n) = T(n/2) + n^2  | $\Theta(n^2                    )$ |                                           |
+    | T(n) = 2T(n/2) + n^2 | $\Theta(n^2                    )$ |                                           |
+    | T(n) = 3T(n/2) + n^2 | $\Theta(n^2                    )$ |                                           |
+    | T(n) = 3T(n/2) + n   | $\Theta(n**(log_2(3)                    )$ | runtime of [Karatsuba's integer multiplication algorithm](https://en.wikipedia.org/wiki/Karatsuba_algorithm); HINT: Case 1 |
     | T(n) = 7T(n/2) + n^2 | $\Theta(                    )$ | runtime of [Strassen's matrix multiplication algorithm](https://en.wikipedia.org/wiki/Strassen_algorithm) |
 
 1. Upload your changes to github (and not gitlab) by using the following steps.
